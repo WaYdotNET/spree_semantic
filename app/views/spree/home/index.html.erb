@@ -1,6 +1,35 @@
 <% content_for :shopby do %>
     <%= render 'shopby' %>
 <% end %>
+
+<% if @slider_products %>
+  <div id="home-slider" class="row">
+    <ul>
+      <% @slider_products.each do |product| %>
+        <li>
+            <div class="slider-product-image">
+            <%= link_to product_image(product), product %>
+          </div>
+          <div class="product-info">
+            <h4 class="product-title"><%= product.name %> </h4>
+         </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<hr />
+<div class="row">
+    <div id="welcome-message">
+        <div class="container">
+        <h1>Welcome to our amazing store!
+      <br>
+      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
+    </h1>
+        </div>
+    </div>
+</div>
+<hr />
 <div class="row">
     <div id="promotions">
         <div class="span4">
@@ -12,17 +41,6 @@
             <div class="">
                 <%= image_tag('store/sightuary_free_shipping.png', :alt => 'promo') %>
             </div>
-        </div>
-    </div>
-</div>
-<hr />
-<div class="row">
-    <div id="welcome-message">
-        <div class="container">
-        <h1>Welcome to our amazing store!
-      <br>
-      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
-    </h1>
         </div>
     </div>
 </div>
