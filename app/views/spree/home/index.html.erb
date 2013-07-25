@@ -1,6 +1,8 @@
-<% content_for :shopby do %>
-    <%= render 'shopby' %>
-<% end %>
+  <div id="shopby">
+    <div class="container">
+        <%= yield :shopby %>
+    </div>
+  </div>
 
 <% if @slider_products %>
   <div id="home-slider" class="row">
