@@ -1,8 +1,17 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
+<% content_for :shopby do %>
+    <%= render 'shopby' %>
 <% end %>
+
+<div class="row">
+    <div id="welcome-message">
+        <div class="container">
+        <h1>Welcome to our amazing store!
+      <br>
+      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
+    </h1>
+        </div>
+    </div>
+</div>
 
 <div data-hook="homepage_products">
   <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
