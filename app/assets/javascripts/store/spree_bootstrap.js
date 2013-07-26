@@ -18,7 +18,7 @@ $(function(){
   var cached_carousel_1 = $('#featured-products .carousel').html();
   var cached_carousel_2 = $('#latest-products .carousel').html();
   
-  $('#home-slider > ul').bxSlider({
+  $('#home-slider > .span12 > ul').bxSlider({
                                   mode: 'horizontal',
                                   captions: true,
                                   adaptiveHeight: false,
