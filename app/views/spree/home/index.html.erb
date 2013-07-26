@@ -6,6 +6,8 @@
 
 <% if @slider_products %>
   <div id="home-slider" class="row">
+      <div class="span 12">
+
     <ul>
       <% @slider_products.each do |product| %>
         <li>
@@ -18,6 +20,7 @@
         </li>
       <% end %>
     </ul>
+    </div>
   </div>
 <% end %>
 <hr />
