@@ -3,7 +3,17 @@
     <%= render 'shopby' %>
     </div>
   </div>
-
+<div class="row">
+    <div id="welcome-message">
+        <div class="container">
+        <h1>Welcome to our amazing store!
+      <br>
+      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
+    </h1>
+        </div>
+    </div>
+</div>
+<hr />
 <% if @slider_products %>
   <div id="home-slider" class="row">
     <div class="span12">
@@ -23,17 +33,7 @@
   </div>
 <% end %>
 <hr />
-<div class="row">
-    <div id="welcome-message">
-        <div class="container">
-        <h1>Welcome to our amazing store!
-      <br>
-      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
-    </h1>
-        </div>
-    </div>
-</div>
-<hr />
+
 <div class="row">
     <div id="promotions">
         <div class="span4">
