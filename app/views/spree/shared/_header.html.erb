@@ -10,7 +10,64 @@
     	    <a id="textual" href="http://demo.yithemes.com/bazar" title="Sightuary"><%= logo %></a>
             <p id="tagline">Everymedia purification and cultivation</p> 
     	</div>	
+    <div id="header-cart-search">
+        <div class="cart-row group">
+                                
+            <div class="cart-items cart-items-icon">
+                <span class="cart-items-number">0</span>
+                <span class="cart-items-label">Items</span>
+            </div>
+
+            <div class="cart-subtotal">
+                                    <span class="cart-subtotal-currency">$</span>
+                                <span class="cart-subtotal-integer">0</span>
+                <span class="cart-subtotal-decimal">00</span>
+                            </div>
+
+                            <div class="widget woocommerce widget_shopping_cart"><div class="border-1 border"><div class="border-2 border"><h2 class="widgettitle">Cart</h2>				<a href="http://demo.yithemes.com/bazar/cart/" class="cart_control" style="display: none;">View Cart</a>
+            <a class="cart_control cart_control_empty">Empty Cart</a>
+					<div class="cart_wrapper">
+		<div class="widget_shopping_cart_content">
+<ul class="cart_list product_list_widget ">
+
+	
+		<li class="empty">No products in the cart.</li>
+		
+		<div class="empty-buttons"><a href="http://demo.yithemes.com/bazar/shop/" class="button">Go to the shop</a></div>
+
+	
+</ul><!-- end product list -->
+
+</div>			</div>
+			
+			
+			<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$(document).on('click', '.cart_control', function(e){
+					//e.preventDefault();
+				});
+				
+				$(document).on('hover', '.cart_control', function(){
+					$(this).next('.cart_wrapper').slideDown();
+				}).on('mouseleave', '.cart_control', function(){
+					$(this).next('.cart_wrapper').delay(500).slideUp();
+				});
+				
+				
+			    $(document).on('mouseenter', '.cart_wrapper', function(){ $(this).stop(true,true).show() })
+                $(document).on('mouseleave', '.cart_wrapper', function(){ $(this).delay(500).slideUp() });
+			});
+			</script>
+			</div></div></div>                            </div>
     
+        <div class="widget widget_search_mini">
+		<form action="http://demo.yithemes.com/bazar/" method="get" class="search_mini">
+			<input type="text" name="s" id="search_mini" value="" placeholder="search for products">
+			<input type="hidden" name="post_type" value="product">
+            <input type="submit" value="" id="mini-search-submit">
+		</form>
+
+</div>    </div>
 
     <div id="header-sidebar" class="group hidden-phone">                                                     
 		<div id="text-image-2" class="widget-1 widget-first widget text-image">
@@ -18,9 +75,8 @@
             <h3>ANOTHER WIDGET</h3>
             <p>ADD ICON AND TEXT</p>
         </div>
+    </div>
         
-
-		</div>
-        </div>
+ </div></div>
   <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
 </header>
