@@ -1,6 +1,9 @@
-<header id="header" class="row" data-hook>
-  
     <%= render :partial => 'spree/shared/nav_bar' %>
+    
+    
+<header id="header" class="group" data-hook>
+  
+    <div class="group container">
     
     <div class="row" id="logo-headersidebar-container">            
     <div id="logo" class="group">
@@ -17,9 +20,7 @@
         </div>
         
 
-		
-
-
+		</div>
         </div>
   <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
 </header>
