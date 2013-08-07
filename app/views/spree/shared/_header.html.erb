@@ -47,19 +47,41 @@
                             </span>
                             </div>
 
-                            <div class="widget woocommerce widget_shopping_cart">
-                            <div class="border-1 border">
-                                <div class="border-2 border">
-                                    <h2 class="widgettitle">Cart</h2>				
-                                        <a href="http://demo.yithemes.com/bazar/cart/" class="cart_control" style="display: none;">View Cart</a>
-                                        <a class="cart_control cart_control_empty">Empty Cart</a>
-                                    <div class="cart_wrapper" style="display: none; ">vvvvv</div>
+            <div class="widget widget_shopping_cart">
+                <div class="border-1 border">
+                    <div class="border-2 border">
+                        <h2 class="widgettitle">Cart</h2>				
+                        <a href="" class="cart_control" style="display: none;">View Cart</a>
+                        <a class="cart_control cart_control_empty">Empty Cart</a>
+                        <div class="cart_wrapper" style="display: none; ">
+                            <div class="widget_shopping_cart_content">
+                            <ul class="cart_list product_list_widget ">
+                                <li class="empty">No products in the cart.</li>
+                                <div class="empty-buttons">
+                                    <a href="" class="button">Go to the shop</a></div>
+                            </ul><!-- end product list -->
+                            </div>			
+                        </div>
 			
 			
-
-                                </div>
-                            </div>
-                            </div>                            
+			<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$(document).on('click', '.cart_control', function(e){
+					//e.preventDefault();
+				});
+				
+				$(document).on('hover', '.cart_control', function(){
+					$(this).next('.cart_wrapper').slideDown();
+				}).on('mouseleave', '.cart_control', function(){
+					$(this).next('.cart_wrapper').delay(500).slideUp();
+				});
+				
+				
+			    $(document).on('mouseenter', '.cart_wrapper', function(){ $(this).stop(true,true).show() })
+                $(document).on('mouseleave', '.cart_wrapper', function(){ $(this).delay(500).slideUp() });
+			});
+			</script>
+			</div></div></div>             
             
             
             
