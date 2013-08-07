@@ -34,8 +34,7 @@
             </div>
 
             <div class="cart-subtotal">
-                            <span class="cart-subtotal-currency">$</span>
-                            <span class="cart-subtotal-integer">
+                            <span class="cart-subtotal-currency">
                             
                               <% if current_order.nil? or current_order.item_count.zero? %>
                                 $0
@@ -48,12 +47,21 @@
                             </span>
                             </div>
 
-                                    </div>
+                            <div class="widget woocommerce widget_shopping_cart">
+      </div>                            
+            
+            
+            
+            </div>
     
         <div class="widget widget_search_mini">
             <%= render :partial => 'spree/shared/search' %>
         </div>    
-</div>	<!-- START HEADER SIDEBAR -->
+</div>	
+
+
+
+<!-- START HEADER SIDEBAR -->
 	<div id="header-sidebar" class="group hidden-phone">                                                     
 		<div id="text-image-2" class="widget-1 widget-first widget text-image"><div class="text-image" style="text-align:left"><img src="http://demo.yithemes.com/bazar/files/2013/01/widget1.png" alt="" width="36" height="43"></div><h3>ANOTHER WIDGET</h3>
 <p>ADD ICON AND TEXT</p></div><div id="text-image-3" class="widget-2 widget text-image"><div class="text-image" style="text-align:left"><img src="http://demo.yithemes.com/bazar/files/2013/01/widget221.png" alt="" width="16" height="43"></div><h3>CUSTOMER SUPPORT</h3>
