@@ -34,7 +34,7 @@
             </div>
 
             <div class="cart-subtotal">
-                            <span class="cart-subtotal-currency">
+                            <span class="cart-subtotal-integer">
                             
                               <% if current_order.nil? or current_order.item_count.zero? %>
                                 $0
@@ -48,7 +48,18 @@
                             </div>
 
                             <div class="widget woocommerce widget_shopping_cart">
-      </div>                            
+                            <div class="border-1 border">
+                                <div class="border-2 border">
+                                    <h2 class="widgettitle">Cart</h2>				
+                                        <a href="http://demo.yithemes.com/bazar/cart/" class="cart_control" style="display: none;">View Cart</a>
+                                        <a class="cart_control cart_control_empty">Empty Cart</a>
+                                    <div class="cart_wrapper" style="display: none; "></div>
+			
+			
+
+                                </div>
+                            </div>
+                            </div>                            
             
             
             
