@@ -24,11 +24,12 @@
             <div class="cart-items cart-items-icon">
                 <span class="cart-items-number"><i class="icon-shopping-cart"></i> </span>
                       <% if current_order.nil? or current_order.item_count.zero? %>
-                            <span class="cart-items-number"> <%= current_order.item_count %></span>
-                            <span class="cart-items-label">Items</span>
+                                                        <span class="cart-items-label"><%= Spree.t('empty') %></span>
+
 
                       <% else %>
-                            <span class="cart-items-label"><%= Spree.t('empty') %></span>
+                            <span class="cart-items-number"> <%= current_order.item_count %></span>
+                            <span class="cart-items-label">Items</span>
 
                       <% end %>
             </div>
