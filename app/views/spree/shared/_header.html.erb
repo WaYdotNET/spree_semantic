@@ -17,94 +17,20 @@
     	</div>
     	<!-- END LOGO -->
     	<div id="header-cart-search">
-        <div class="cart-row group">
-                   
-                                  
-                                                                                    
-            <div class="cart-items cart-items-icon">
-                <span class="cart-items-number"><i class="icon-shopping-cart"></i> </span>
-                      <% if current_order.nil? or current_order.item_count.zero? %>
-                            <span class="cart-items-label"><%= Spree.t('empty') %></span>
+        
+        
+                    <div class="">
+            <%= render :partial => 'spree/shared/search' %>
+        </div> 
 
-                      <% else %>
-                            <span class="cart-items-number"> <%= current_order.item_count %></span>
-                            <span class="cart-items-label">Items</span>
-
-                      <% end %>
-            </div>
-
-            <div class="cart-subtotal">
-                            <span class="cart-subtotal-integer">
-                            
-                              <% if current_order.nil? or current_order.item_count.zero? %>
-                                $0
-
-                      <% else %>
-                             <%= current_order.display_total %>
-
-                      <% end %>
-                            
-                            </span>
-                            </div>
-
-            <div class="widget widget_shopping_cart">
-                <div class="border-1 border">
-                    <div class="border-2 border">
-                        <h2 class="widgettitle">Cart</h2>				
-                        <a href="" class="cart_control" style="display: none;">View Cart</a>
-                        <a class="cart_control cart_control_empty">Empty Cart</a>
-                        <div class="cart_wrapper" style="display: none; ">
-                            <div class="widget_shopping_cart_content">
-                            <ul class="cart_list product_list_widget ">
-                                <li class="empty">No products in the cart.</li>
-                                <div class="empty-buttons">
-                                    <a href="" class="button">Go to the shop</a></div>
-                            </ul><!-- end product list -->
-                            </div>			
-                        </div>
-			
-			
-			<script type="text/javascript">
-			jQuery(document).ready(function($){
-				$(document).on('click', '.cart_control', function(e){
-					//e.preventDefault();
-				});
-				
-				$(document).on('hover', '.cart_control', function(){
-					$(this).next('.cart_wrapper').slideDown();
-				}).on('mouseleave', '.cart_control', function(){
-					$(this).next('.cart_wrapper').delay(500).slideUp();
-				});
-				
-				
-			    $(document).on('mouseenter', '.cart_wrapper', function(){ $(this).stop(true,true).show() })
-                $(document).on('mouseleave', '.cart_wrapper', function(){ $(this).delay(500).slideUp() });
-			});
-			</script>
-			</div></div></div>             
-            
-            
-            
-            </div>
-            
-              <div class="textwidget">Get Social &nbsp; &nbsp; &nbsp;
-        <div class="socials-default-small facebook-small default">
-        <a href="# " class="socials-default-small default facebook"><i class="icon-facebook"></i></a>
-        </div>
-
-        <div class="socials-default-small twitter-small default">
-        <a href="#" class="socials-default-small default twitter"><i class="icon-twitter"></i></a>
-        </div>
-
-        <div class="socials-default-small linkedin-small default">
-        <a href="#" class="socials-default-small default linkedin"><i class="icon-linkedin"></i></a>
-        </div>
-
-        <div class="socials-default-small pinterest-small default">
-        <a href="#" class="socials-default-small default pinterest"><i class="icon-pinterest"></i></a>
-        </div>
-    </div>
-
+        
+        
+        
+        
+        
+        
+        
+        
             
             
 
@@ -118,9 +44,6 @@
 <p>ADD ICON AND TEXT</p></div><div id="text-image-3" class="widget-2 widget text-image"><div class="text-image" style="text-align:left"><img src="http://demo.yithemes.com/bazar/files/2013/01/widget221.png" alt="" width="16" height="43"></div><h3>CUSTOMER SUPPORT</h3>
 <p>+ 39 097 372659</p></div><div id="text-2" class="widget-3 widget-last widget widget_text">			
     
-            <div class="">
-            <%= render :partial => 'spree/shared/search' %>
-        </div> 
   		</div>	</div> 
            
     </div>
