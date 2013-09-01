@@ -33,9 +33,8 @@
 <% end %>
 <hr />
 
-<h3> Current Promotions </h3>
 <div class="row">
-
+<h3> Current Promotions </h3>
     <div id="promotions">
         <div class="col-md-4">
             <div class="">
@@ -50,9 +49,9 @@
     </div>
 </div>
 <hr />
-  <h3> Just Products </h3>
 
 <div data-hook="homepage_products">
+  <h3> Just Products </h3>
   <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
 
