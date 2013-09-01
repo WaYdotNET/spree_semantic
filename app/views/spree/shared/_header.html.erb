@@ -12,33 +12,33 @@
                                 <p id="tagline">Everymedia purification and cultivation, shop living.</p> 
 							</div>
 						</div>
-						<div id="header-cart-search" class="col-md-6 pull-left">
+						<div id="header-cart-search" class="col-md-5 pull-left">
                             <%= render :partial => 'spree/shared/search' %>
 						</div>
                         
                         
-                        <div class="cart-row group col-md-4"> 
-                        
-                                                                                          
-                                                                                                                                                            
-                                         <!-- START HEADER SIDEBAR -->
-	<div id="header-sidebar" class="row">                                                     
-		<div id="text-image-2" class="widget text-image col-md-2">
-            <div class="text-image" style="text-align:left">
-                <img src="" alt="" width="36" height="43"></div><h3>ANOTHER WIDGET</h3>
-                <p>ADD ICON AND TEXT</p>
-            </div>
-            <div id="text-image-3" class="widget text-image col-md-2">
-                <div class="text-image" style="text-align:left">
-                <img src="" alt="" width="16" height="43">
-            </div>
-            <h3>CUSTOMER SUPPORT</h3>
-<p>+ 39 097 372659</p></div>
-
-
-<div id="text-2" class="row widget-last widget widget_text col-md-4">			
-    <div class="cart-items cart-items-icon">
-                <span class="cart-items-number"><i class="icon-shopping-cart"></i> </span>
+                        <div class="cart-row group col-md-5">
+                        <!-- START HEADER SIDEBAR -->
+                            <div id="header-sidebar" class="row">                                                     
+                                <div id="text-image-2" class="widget text-image col-md-2">
+                                    <div class="text-image" style="text-align:left">
+                                        <i class="icon-camera-retro"></i>
+                                    </div>
+                                <h3>ANOTHER WIDGET</h3>
+                                <p>ADD ICON AND TEXT</p>
+                            </div>
+            
+                            <div id="text-image-3" class="widget text-image col-md-2">
+                                <div class="text-image" style="text-align:left">
+                                    <i class="icon-camera-retro"></i>
+                                </div>
+                                <h3>CUSTOMER SUPPORT</h3>
+                                <p>+ 39 097 372659</p>
+                            </div>
+                            
+                            <div id="text-2" class="row widget-last widget widget_text col-md-4">			
+                                <div class="cart-items cart-items-icon">
+                                    <span class="cart-items-number"><i class="icon-shopping-cart"></i> </span>
                       <% if current_order.nil? or current_order.item_count.zero? %>
                             <span class="cart-items-label"><%= Spree.t('empty') %></span>
 
@@ -47,71 +47,15 @@
                             <span class="cart-items-label">Items</span>
 
                       <% end %>
-            </div>
+                                </div>
 
-  		</div>	</div>                                                                                                                                                                                      
-                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                  
-                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-                        
-            <div class="cart-subtotal">
-                            <span class="cart-subtotal-integer">
-                            
-                              <% if current_order.nil? or current_order.item_count.zero? %>
-                                $0
-
-                      <% else %>
-                             <%= current_order.display_total %>
-
-                      <% end %>
-                            
-                            </span>
-                            </div>
-
-            <div class="widget widget_shopping_cart">
-                <div class="border-1 border">
-                    <div class="border-2 border">
-                        <h2 class="widgettitle">Cart</h2>				
-                        <a href="" class="cart_control" style="display: none;">View Cart</a>
-                        <a class="cart_control cart_control_empty">Empty Cart</a>
-                        <div class="cart_wrapper" style="display: none; ">
-                            <div class="widget_shopping_cart_content">
-                            <ul class="cart_list product_list_widget ">
-                                <li class="empty">No products in the cart.</li>
-                                <div class="empty-buttons">
-                                    <a href="" class="button">Go to the shop</a></div>
-                            </ul><!-- end product list -->
-                            </div>			
-                        </div>
+                            </div>	
+                        </div>  
+                                                                                                                                                                                                
+					</div> <!-- row Ends -->
+				</div> <!-- group Ends -->
+			</header> <!-- Header Ends -->
 			
-			
-			<script type="text/javascript">
-			jQuery(document).ready(function($){
-				$(document).on('click', '.cart_control', function(e){
-					//e.preventDefault();
-				});
-				
-				$(document).on('hover', '.cart_control', function(){
-					$(this).next('.cart_wrapper').slideDown();
-				}).on('mouseleave', '.cart_control', function(){
-					$(this).next('.cart_wrapper').delay(500).slideUp();
-				});
-				
-				
-			    $(document).on('mouseenter', '.cart_wrapper', function(){ $(this).stop(true,true).show() })
-                $(document).on('mouseleave', '.cart_wrapper', function(){ $(this).delay(500).slideUp() });
-			});
-			</script>
-			</div></div></div>             
-            
-            
-            
-            </div>
-					</div>
-				</div>
-			</header>
-			<!-- Header Ends -->
 
 
 <hr />
