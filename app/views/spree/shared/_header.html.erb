@@ -48,6 +48,21 @@
                                             <span class="cart-items-label">Items</span>
                                         <% end %>
                                     </div>
+                                    
+                                    <div class="cart-subtotal">
+                                        <span class="cart-subtotal-integer">
+                            
+                                        <% if current_order.nil? or current_order.item_count.zero? %>
+                                $0
+
+                                        <% else %>
+                                            <%= current_order.display_total %>
+
+                                        <% end %>
+                            
+                                        </span>
+                                    </div>
+                                    
                                 </div>
 				
                     </div> <!-- row Ends -->
