@@ -1,6 +1,6 @@
 <nav id="top-nav-bar" class="row">
 
-    <div class="textwidget">Get Social &nbsp; &nbsp; &nbsp;
+    <div class="textwidget col-md-4">Get Social &nbsp; &nbsp; &nbsp;
         <div class="socials-default-small facebook-small default">
         <a href="# " class="socials-default-small default facebook"><i class="icon-facebook"></i></a>
         </div>
@@ -20,7 +20,7 @@
 
 
 
-  <ul id="nav-bar" class="inline" data-hook>
+  <ul id="nav-bar" class="inline col-md-6 pull-right" data-hook>
     <% if spree_current_user %>
   <li><%= link_to Spree.t(:my_account), spree.account_path %></li>
   <li><%= link_to Spree.t(:logout), spree.logout_path %></li>
