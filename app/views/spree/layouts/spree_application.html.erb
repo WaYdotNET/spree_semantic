@@ -9,15 +9,15 @@
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
-    <div class="container">
+    <div class="storewindow">
 
       <%= render :partial => 'spree/shared/header' %>
 
-      <div id="wrapper" class="row-fluid" data-hook>
+      <div id="wrapper" class="row" data-hook>
 
         <%= breadcrumbs(@taxon) %>
 
-        <div class='row-fluid'>
+        <div class='row'>
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
           <div id="content" class="span<%= !content_for?(:sidebar) ? "12" : "8" %>" data-hook>
