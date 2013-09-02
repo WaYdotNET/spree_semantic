@@ -33,7 +33,7 @@
                                     <i class="icon-camera-retro"></i>
                                     </div>
                                     <h3>CUSTOMER SUPPORT</h3>
-                                    <p>+ 39 097 372659</p>
+                                    <p>+ 01 011 372659</p>
                                 </div>
                             
                                 <div id="text-2" class="widget-last widget widget_text col-md-12">			
@@ -44,7 +44,12 @@
                                             </span>
 
                                         <% else %>
-                                            <span class="cart-items-number"> <%= current_order.item_count %></span>
+                                            <span class="cart-items-number"> 
+                                            
+                                            
+                                            <%= link_to <%= current_order.item_count %>, spree.cart_path, :class => "cart-info #{css_class}" %>
+                                            
+                                            </span>
                                             <span class="cart-items-label">Items</span>
                                         <% end %>
                                     </div>
