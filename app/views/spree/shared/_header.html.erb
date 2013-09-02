@@ -45,12 +45,10 @@
 
                                         <% else %>
                                             <span class="cart-items-number"> 
-                                            
-                                            
-                                            <%= link_to Spree.t('cart'), spree.cart_path, :class => "cart-info" %>
-                                            
+                                            <%= current_order.item_count %>
                                             </span>
-                                            <span class="cart-items-label">Items</span>
+                                            <span class="cart-items-label">  
+                                            <%= link_to Spree.t('cart'), spree.cart_path, :class => "cart-info" %> Items</span>
                                         <% end %>
                                     </div>
                                     
