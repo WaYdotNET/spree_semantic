@@ -3,7 +3,7 @@
   </div>
 <div class="row">
     <div id="welcome-message">
-        <div class="container">
+        <div class="col-md-12">
         <h1>Welcome to our amazing store!
       <br>
       Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
@@ -15,7 +15,7 @@
 <% if @slider_products %>
 <div class="row">
 <h3> Wow Products </h3>
-  <div id="home-slider">
+  <div id="home-slider" class="col-md-12" >
     <ul>
       <% @slider_products.each do |product| %>
         <li>
