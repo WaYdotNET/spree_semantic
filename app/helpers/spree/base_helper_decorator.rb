@@ -12,7 +12,7 @@ module Spree
         crumbs << content_tag(:li, content_tag(:span, Spree.t(:products)))
       end
       crumb_list = content_tag(:ul, raw(crumbs.flatten.map{|li| li.mb_chars}.join), class: 'inline')
-      content_tag(:nav, crumb_list, id: 'breadcrumbs', class: 'span12')
+      content_tag(:nav, crumb_list, id: 'breadcrumbs', class: 'column')
     end
   end
 end

@@ -1,8 +1,8 @@
-module SpreeBootstrap
+module SpreeSemantic
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'spree_bootstrap'
+    engine_name 'spree_semantic'
 
     config.autoload_paths += %W(#{config.root}/lib)
 

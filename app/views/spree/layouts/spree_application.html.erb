@@ -9,18 +9,18 @@
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
-    <div class="storewindow">
+    <div class="container ui grid">
 
       <%= render :partial => 'spree/shared/header' %>
 
-      <div id="wrapper" class="row" data-hook>
+      <div id="wrapper" class="column" data-hook>
 
         <%= breadcrumbs(@taxon) %>
 
         <div class='row'>
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
-          <div id="content" class="span<%= !content_for?(:sidebar) ? "col-md-12" : "col-md-8" %>" data-hook>
+          <div id="content" class="<%= !content_for?(:sidebar) ? "twelve" : "eight" %> wide column" data-hook>
             <%= flash_messages %>
             <%= yield %>
           </div>

@@ -1,59 +1,9 @@
-  <div id="shopby">
-    <%= render 'shopby' %>
-  </div>
-<div class="row">
-    <div id="welcome-message">
-        <div class="col-md-12">
-        <h1>Welcome to our amazing store!
-      <br>
-      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
-    </h1>
-        </div>
-    </div>
-</div>
-<hr />
-<% if @slider_products %>
-<div class="row">
-<h3> Wow Products </h3>
-  <div id="home-slider" class="col-md-12" >
-    <ul>
-      <% @slider_products.each do |product| %>
-        <li>
-            <div class="slider-product-image">
-            <%= link_to product_image(product), product %>
-          </div>
-          <div class="product-info">
-            <h4 class="product-title"><%= product.name %> </h4>
-         </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
   </div>
 <% end %>
 
-
-<hr />
-
-<div class="row">
-<h3> Current Promotions </h3>
-    <div id="promotions">
-        <div class="col-md-4">
-            <div class="">
-                <%= image_tag('store/sightuary_newarrivals_.jpg', :alt => 'promo') %>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="">
-                <%= image_tag('store/sightuary_free_shipping.png', :alt => 'promo') %>
-            </div>
-        </div>
-    </div>
-</div>
-<hr />
-
 <div data-hook="homepage_products">
-  <h3> Just Products </h3>
   <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
-

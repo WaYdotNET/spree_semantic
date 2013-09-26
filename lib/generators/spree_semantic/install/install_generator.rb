@@ -1,21 +1,21 @@
-module SpreeBootstrap
+module SpreeSemantic
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_javascripts
-        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_bootstrap\n"
-        append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_bootstrap\n"
+        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_semantic\n"
+        append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_semantic\n"
       end
 
       def add_stylesheets
-        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_bootstrap\n", :before => /\*\//, :verbose => true
-        inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_bootstrap\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_semantic\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_semantic\n", :before => /\*\//, :verbose => true
       end
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_bootstrap'
+        run 'bundle exec rake railties:install:migrations FROM=spree_semantic'
       end
 
       def run_migrations
