@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'semantic-ui-rails'
 require 'font-awesome-rails'
 require 'spree_semantic/engine'
 require 'spree_frontend'

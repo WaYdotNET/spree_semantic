@@ -5,7 +5,7 @@
 //= require jquery.isotope
 //= require matchMedia
 //= require enquire
-//= require semantic
+
 
 $(function(){
   
