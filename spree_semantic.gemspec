@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'semantic-ui-rails', '~> 0.0.1.0'
+  s.add_dependency 'semantic-ui-rails'
   s.add_dependency 'less-rails-fontawesome'
   s.add_dependency 'spree_api'
   s.add_dependency 'spree_core', '~> 2.1.0'
