@@ -1,4 +1,6 @@
 //= require store/spree_frontend
+//= require semantic-ui
+
 //= require jquery.hoverIntent
 //= require jquery.bxslider
 //= require jquery.dotdotdot-1.5.2
