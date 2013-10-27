@@ -12,7 +12,7 @@ This project aims to replace the spree_frontend's use of the skeleton css framew
 Installation
 ------------
 
-Add spree_bootstrap to your Gemfile:
+Add spree_semantic to your Gemfile:
 
 ```ruby
 gem 'spree_semantic', github: 'stunjiturner/spree_semantic'
