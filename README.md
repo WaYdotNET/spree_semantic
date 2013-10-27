@@ -15,14 +15,14 @@ Installation
 Add spree_bootstrap to your Gemfile:
 
 ```ruby
-gem 'spree_bootstrap', github: 'jdutil/spree_bootstrap'
+gem 'spree_semantic', github: 'stunjiturner/spree_semantic'
 ```
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_bootstrap:install
+bundle exec rails g spree_semantic:install
 ```
 
 Testing
@@ -40,7 +40,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_bootstrap/factories'
+require 'spree_semantic/factories'
 ```
 
-Copyright (c) 2013 Jeff Dutil, released under the New BSD License
+Copyright (c) 2013 S. Tunji Turner, released under the New BSD License
